@@ -31,6 +31,27 @@ div#carousel-title  {
     font-weight: bold;
 }
 
+#carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#carousel-controls button {
+    background-color: #1b357e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#carousel-controls button:hover {
+    background-color: #0f245c;
+}
 header ul {
     text-align: center;
     margin-left: auto;
