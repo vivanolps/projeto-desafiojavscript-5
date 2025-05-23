@@ -84,9 +84,22 @@ main {
     min-height: calc(100% - 167px);
 }
 
+/* Estou adicionando o copyright */
+.copyright {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+footer div:last-child {
+    float: right;
+    margin-right: 40px;
+}
 nav#social {
-    display: inline;
-    width: 80%;
+    display: inline-block;
+    width: auto;
 }
 
 nav#social ul img {
@@ -99,8 +112,12 @@ span.redesociais {
 }
 
 footer {
-    background: #1B357E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b357e;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 footer div {
