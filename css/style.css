@@ -17,7 +17,7 @@ div#carousel {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #000; /* ou branco, se preferir */
+    box-shadow: 0 4px 10px rgba(100, 149, 237, 0.3); /* azul cornflower */
 }
 
 div#carousel-title a {
@@ -53,6 +53,17 @@ div#carousel-title  {
 #carousel-controls button:hover {
     background-color: #0f245c;
 }
+
+.carousel-image {
+    max-width: 90%; /* diminui a largura */
+    max-height: 90%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    border-radius: 12px; /*bordinha arredondada */
+    box-shadow: 0 4px 10x rgba(0, 0, 0, 0.2); /*sombra suave*/
+}
+
 header ul {
     text-align: center;
     margin-left: auto;
@@ -148,12 +159,15 @@ footer div {
     margin-right: 40px;
 }
 
-button:hover {
-    background: #1b357e;
-}
 button {
     background: #1351d8;
     color: #fff;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 20px; /* mais arredondado */
+    padding: 6px 12px; /* menorzinho */
+    font-size: 14px; /* texto um pouco menor */
+}
+
+button hover {
+    background: #1351d8;
 }

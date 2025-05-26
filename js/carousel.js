@@ -14,6 +14,9 @@ class Carousel {
 
             document.getElementById('prev-bnt').addEventListener('click', Carousel.Previous);
             document.getElementById('next-bnt').addEventListener('click', Carousel.Next);
+
+            //esqueci da imagem sendo trocadaaa
+            Carousel._interval = setInterval(Carousel.Next, 2000); //troca a imagem a cada dois segundos
         } else {
             throw "O método Start precisa de um array";
         }
@@ -35,7 +38,7 @@ static Show(item) {
     const divImage = document.getElementById('carousel');
     const divTitle = document.getElementById('carousel-title');
 
-    divImage.innerHTML = `<img src="img/${item.image}" style="max-width:100%; max-height:100%; object-fit:contain; display:block; margin:auto;">`;
+    divImage.innerHTML = `<img src="img/${item.image}" class="carousel-image" alt="${item.title}">`;
     divTitle.innerHTML = `<a href="${item.url}" style="text-decoration:none; color:#1351d8; font-size:20px;">${item.title}</a>`;
     }
 }
