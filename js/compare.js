@@ -24,7 +24,7 @@ function GetCarArrPosition(arr, carClass) {
     return -1;
 }
 
-function DefinirCarroParaComparar(el, carClass) {
+function SetCarToCompare(el, carClass) {
     if(!(carClass instanceof Car)) {
         throw "Você precisa passar um objeto da classe Car";
     }
@@ -64,9 +64,9 @@ function HideCompare() {
 
 function UpdateCompareTable() {
     for (let i = 0; i < 2; i++) {
-        document.getElementById("compare_image_" + i).innerHTML = <img src="${carArr[i].image}" width="150"/>;
+        document.getElementById("compare_image_" + i).innerHTML = `<img src="${carArr[i].image}" width="150"/>`;
 
-        document.getElementById("compare_modelo_" + i).textContent = carArr[i].none;
+        document.getElementById("compare_modelo_" + i).textContent = carArr[i].nome;
 
         document.getElementById("compare_alturacacamba_" + i).textContent = carArr[i].alturaCacamba + " mm";
         
@@ -74,7 +74,7 @@ function UpdateCompareTable() {
         
         document.getElementById("compare_alturasolo_" + i).textContent = carArr[i].alturaSolo + " mm";
         
-        document.getElementById("compare_capacidadecarga_" + i).textContent = carArr[i].capacidadeCarga + " Kg";
+        document.getElementById("compare_capacidadecarga_" + i).textContent = carArr[i].capacidadeDeCarga + " Kg";
         
         document.getElementById("compare_motor_" + i).textContent = carArr[i].motor + " L";
        

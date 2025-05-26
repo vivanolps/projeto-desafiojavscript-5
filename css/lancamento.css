@@ -64,22 +64,29 @@ table {
     width: 40%;
   }
 
+  td.destaque-coluna {
+    font-weight: 700;
+    width: 40%;
+}
+
   tr:nth-child(even) {background-color: #f2f2f2;}
 
-div#compare {
-    position: absolute;
-    display: none;
-    width: 50vw;
+  div#compare {
+    position: fixed; /* Fixo na tela, mesmo com scroll */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza precisamente */
+    width: 50vw; /* Largura responsiva */
     max-width: 800px;
     min-width: 400px;
-    height: 80vh;
+    height: 80vh; /* Altura responsiva */
     max-height: 700px;
     min-height: 350px;
     background: #fff;
-    top: calc(100vh - 80%);
-    left: 25vw;
     border-radius: 10px;
     padding: 10px;
-    -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
-    box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.34); /* Sombra suave */
+    display: none; /* Inicialmente oculto */
+    overflow-y: auto; /* Adicione scroll se o conteúdo for muito longo */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
 }
