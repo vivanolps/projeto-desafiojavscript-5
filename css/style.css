@@ -12,11 +12,12 @@ html {
 
 div#carousel {
     width: 100%;
-    height: auto;
-     max-height: 628px;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    max-height: 628px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000; /* ou branco, se preferir */
 }
 
 div#carousel-title a {

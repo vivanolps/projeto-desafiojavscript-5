@@ -35,7 +35,7 @@ static Show(item) {
     const divImage = document.getElementById('carousel');
     const divTitle = document.getElementById('carousel-title');
 
-    divImage.innerHTML = `<img src="img/${item.image}" style="width:100%; max-height:400px; object-fit:cover;">`;
+    divImage.innerHTML = `<img src="img/${item.image}" style="max-width:100%; max-height:100%; object-fit:contain; display:block; margin:auto;">`;
     divTitle.innerHTML = `<a href="${item.url}" style="text-decoration:none; color:#1351d8; font-size:20px;">${item.title}</a>`;
     }
 }
