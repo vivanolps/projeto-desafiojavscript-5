@@ -49,6 +49,7 @@ function SetCarToCompare(el, carClass) {
 function ShowCompare() {
     if(carArr.length < 2) {
         alert("Precisa marcar 2 carros para apresentar a comparação!");
+        document.getElementById("compare-overlay").style.display = "block";
         return;
     }
 
@@ -60,6 +61,7 @@ function ShowCompare() {
 function HideCompare() {
 
     document.getElementById("compare").style.display = "none";
+    document.getElementById("compare-overlay").style.display = "none";
 }
 
 function UpdateCompareTable() {
