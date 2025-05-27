@@ -97,3 +97,15 @@ table {
     border-collapse: collapse;
 }
 
+#compare td, #compare th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+#compare td:first-child {
+    width: 30%;
+    font-weight: bold;
+    color: #1b357e;
+}
