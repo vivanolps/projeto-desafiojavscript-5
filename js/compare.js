@@ -47,16 +47,22 @@ function SetCarToCompare(el, carClass) {
 }
 
 function ShowCompare() {
-    if(carArr.length < 2) {
-        alert("Precisa marcar 2 carros para apresentar a comparação!");
-        document.getElementById("compare-overlay").style.display = "block";
-        return;
+        const compareElement = document.getElementById("compare");
+        
+        if (!compareElement) {
+            console.error("Elemento #compare não encontrado!");
+            return;
+        }
+        
+        if(carArr.length < 2) {
+            alert("Precisa marcar 2 carros para apresentar a comparação!");
+            return;
+        }
+    
+        UpdateCompareTable();
+        compareElement.style.display = "block";
     }
-
-    UpdateCompareTable();
-
-    document.getElementById("compare").style.display = "block";
-}
+   
 
 function HideCompare() {
 
