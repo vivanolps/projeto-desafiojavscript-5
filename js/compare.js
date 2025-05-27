@@ -84,6 +84,6 @@ function UpdateCompareTable() {
         
         document.getElementById("compare_roda_" + 1).textContent = carArr[i].roda;
 
-        document.getElementById("compare_preco_" + i).textContent = "R$" + carArr[i].preco.toLocaleString("pt-BR");
+        document.getElementById("compare_preco_" + i).textContent = "R$ " + carArr[i].preco.toLocaleString("pt-BR", {minimumFractionDigits: 2}); // ajuste porque na tabela o preço estava parecendo errado
     }
 }
