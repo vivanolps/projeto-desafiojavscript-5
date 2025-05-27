@@ -132,6 +132,21 @@ table {
     box-sizing: border-box;
 }
 
+#compare table thead th {
+    color: #1b357e;
+    font-size: 18px;
+    font-weight: bold; /* texto em negrito */
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 2px solid #1b357e;
+    background-color: #f8f9fa; /*fundinho cinza*/
+}
+
+#compare table thead th:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease; /*contrates no titulo da tabela*/
+}
+
 #compare-overlay {
     position: fixed;
     top: 0;
