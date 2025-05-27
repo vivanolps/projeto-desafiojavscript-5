@@ -154,14 +154,54 @@ table {
 }
 
 /* modificando o estilo do botão comparar*/
-button[onclick="ShowCompare()"] {
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-7px);
+    }
+  }
+
+  button[onclick="ShowCompare()"] { 
     height: 40px;
     width: 200px;
     background-color: #1351d8;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-}
+  }
+
+  button[onclick="ShowCompare()"]:hover {  /* efeitos para diferenciar o botao */
+    background-color: #1b357e;
+  }
+  
+  button[onclick="ShowCompare()"]:active {
+    animation: bounce 0.5s ease;
+  }
+
+  button[onclick="HideCompare()"] {
+    height: 40px;
+    width: 200px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button[onclick="HideCompare()"]:hover {  /* efeitos para diferenciar o botao */
+    background-color: #c0392b;
+  }
+  
+  button[onclick="HideCompare()"]:active {
+    animation: bounce 0.5s ease;
+  }
