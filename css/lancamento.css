@@ -109,3 +109,17 @@ table {
     font-weight: bold;
     color: #1b357e;
 }
+
+#compare td:nth-child(2), #compare td:nth-child(3) {
+    width: 35%;
+    white-space: nowrap; /* tive que colocar para evitar a quebra de linha. A tabela estava desproporcional */
+    overflow: hidden;
+    text-overflow: ellipsis; /* PESQUISEI, ajuda se o texto for longo */
+}
+
+#compare img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
