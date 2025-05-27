@@ -142,3 +142,26 @@ table {
     z-index: 999;
     display: none;
 }
+
+/* Vou adicionar um efeito ao botão ele está estático */
+@keyfraames bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+}
+
+/* modificando o estilo do botão comparar*/
+button[onclick="ShowCompare()"] {
+    height: 40px;
+    width: 200px;
+    background-color: #1351d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
