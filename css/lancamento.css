@@ -87,6 +87,13 @@ table {
     padding: 10px;
     box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.34); /* Sombra suave */
     display: none; /* Inicialmente oculto */
-    overflow-y: auto; /* Adicione scroll se o conteúdo for muito longo */
+    overflow-y: auto; 
     z-index: 1000; /* Garante que fique acima de outros elementos */
 }
+
+#compare table {
+    width: 100%;
+    table-layout: fixed; /* mantem as minhas colunas consistentes */
+    border-collapse: collapse;
+}
+
