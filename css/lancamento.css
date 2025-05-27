@@ -95,6 +95,7 @@ table {
     width: 100%;
     table-layout: fixed; /* mantem as minhas colunas consistentes */
     border-collapse: collapse;
+    min-width: 60px; /* para a tabela não ficar estreita */
 }
 
 #compare td, #compare th {
@@ -123,3 +124,11 @@ table {
     display: block;
     margin: 0 auto;
 }
+
+#compare {
+    /* o que eu tenho atualmente */
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
