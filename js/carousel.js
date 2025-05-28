@@ -1,3 +1,4 @@
+
 class Carousel {
     constructor(image, title, url) {
         this.image = image;
