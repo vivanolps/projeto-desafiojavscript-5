@@ -10,10 +10,21 @@ class Carousel {
             Carousel._carouselArr = arr;
             Carousel._sequence = 0;
             Carousel._size = arr.length;
-            Carousel.Next();
+        
+            Carousel.Show(arr[0]); //iniciando o carrosel
 
-            document.getElementById('prev-bnt').addEventListener('click', Carousel.Previous);
-            document.getElementById('next-bnt').addEventListener('click', Carousel.Next);
+            document.getElementById('prev-bnt').addEventListener('click', () => {
+               
+                Carousel.Previous();
+                Carousel.ResetInterval(); // Reinicia o intervalo após clique
+            });
+
+            document.getElementById('next-bnt').addEventListener('click', () => {
+
+                Carousel.Next();
+                Carousel.ResetInterval();
+            });
+
 
             //esqueci da imagem sendo trocadaaa
             Carousel._interval = setInterval(Carousel.Next, 2000); //troca a imagem a cada dois segundos
@@ -21,6 +32,11 @@ class Carousel {
             throw "O método Start precisa de um array";
         }
     }
+
+    static ResetInterval() {
+        clearInterval(Carousel._interval);
+        Carousel._interval = setInterval(Carousel.Next, 2000); //pesquisei,o carosel esta muito rápido
+}
 
     static Previous() {
         Carousel._sequence = (Carousel._sequence - 1 + Carousel._size) % Carousel._size;
