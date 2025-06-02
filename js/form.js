@@ -1,27 +1,18 @@
+document.getElementById('formContato').addEventListener('submit', function(event) {
+    event.preventDefault(); //ta evitando o envio padrão
 
-//class contato
+    //validação básica
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const tipoContato = document.getElementById('tipo-contato').value;
+    const mensagem = document.getElementById('mensagem').value;
 
-class contato {
-    
-}
-
-function Post(form) {
-
-  let data = new contato(form.elements.namedItem("nome").value,
-            form.elements.namedItem("sobrenome").value, 
-            form.elements.namedItem("email").value, 
-            form.elements.namedItem("cpf").value, 
-            form.elements.namedItem("telefone").value, 
-            form.elements.namedItem("contato").value);
-  
-}
-
-function Enviar() {
-
-    var nome = document.getElementById("nomeid");
-
-    if (nome.value != "") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+    if (!nome || !email || !tipoContato || !mensagem) {
+        alert('Por favor, preencha todos os campos obrigatórios!');
+        return;
     }
 
-}
+    //simulação do envio do formulario
+    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+    this.releasePointerCapture(); //limpa o formulário
+})
