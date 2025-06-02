@@ -53,16 +53,18 @@ button {
     margin-left: 8px;
 }
 
-@keyframes pular {
-    0%, 100% {transform: translateY();}
-    50% {transform: translateY(-10px);}
-}
-
-button.pular {
-    animation: pular 0.4s ease;
-}
-
 button.enviado {
     background-color: blue !important;
     color: white;
+}
+
+@keyframes flutuar {    /*Colocando o efeito flutuar na imagem */
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY();}
+}
+
+.carro-flutuando {
+    animation: flutuar 3s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
 }
