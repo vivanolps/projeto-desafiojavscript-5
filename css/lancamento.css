@@ -230,8 +230,8 @@ table {
 
   /*ajustando o video*/
   .video-container {
-    width: 80%;
-    max-width: 900px;
+    width: 95%;
+    max-width: 1200px;
     margin: 0 auto 30px;
     position: relative;
     padding-bottom: 45%; /*PESQUISEI a proporção do vídeo, ele tomava a tela inteira*/
