@@ -53,4 +53,16 @@ button {
     margin-left: 8px;
 }
 
-/* Estilos gerais
+@keyframes pular {
+    0%, 100% {transform: translateY();}
+    50% {transform: translateY(-10px);}
+}
+
+button.pular {
+    animation: pular 0.4s ease;
+}
+
+button.enviado {
+    background-color: blue !important;
+    color: white;
+}
