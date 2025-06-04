@@ -38,11 +38,11 @@ function Post(form) {
     return false;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {  /* para mostrar o exemplo de como colocar as informações */
     const cpfInput = document.getElementById('cpfid');
     const telefoneInput = document.getElementById('telefoneid');
 
-    cpfInput.addEventListener('input', function () {
+    cpfInput.addEventListener('input', function () {  /* amostra dp cpf */
         let v = cpfInput.value.replace(/\D/g, '');
         if (v.length > 11) v = v.slice(0, 11);
         v = v.replace(/(\d{3})(\d)/, '$1.$2');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cpfInput.value = v;
     });
 
-    telefoneInput.addEventListener('input', function () {
+    telefoneInput.addEventListener('input', function () { /* amostra do telefone */
         let v = telefoneInput.value.replace(/\D/g, '');
         if (v.length > 11) v = v.slice(0, 11);
         v = v.replace(/^(\d{2})(\d)/g, '($1) $2');
